@@ -20,7 +20,6 @@ class TradeSlidingButton extends StatefulWidget {
 
 class _TradeSlidingButtonState extends State<TradeSlidingButton> {
   double _dragPosition = 0;
-  bool _isDragging = false;
   double _maxDragDistance = 0;
 
   void _onDragUpdate(DragUpdateDetails details) {
@@ -38,7 +37,6 @@ class _TradeSlidingButtonState extends State<TradeSlidingButton> {
     }
     setState(() {
       _dragPosition = 0;
-      _isDragging = false;
     });
   }
 
@@ -72,8 +70,6 @@ class _TradeSlidingButtonState extends State<TradeSlidingButton> {
               GestureDetector(
                 onHorizontalDragUpdate: _onDragUpdate,
                 onHorizontalDragEnd: _onDragEnd,
-                onHorizontalDragStart:
-                    (_) => setState(() => _isDragging = true),
                 child: Container(
                   height: widget.buttonHeight,
                   width: widget.buttonHeight,
@@ -104,7 +100,7 @@ class _TradeSlidingButtonState extends State<TradeSlidingButton> {
                               : const Icon(
                                 Icons.chevron_right,
                                 color: Colors.white,
-                                size: 32,
+                                size: 36,
                                 key: ValueKey('chevron'),
                               ),
                     ),
