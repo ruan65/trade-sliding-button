@@ -52,7 +52,6 @@ class _TradeSlidingButtonState extends State<TradeSlidingButton> {
     return Container(
       height: _buttonHeight,
       width: double.infinity,
-      margin: const EdgeInsets.symmetric(horizontal: 16),
       decoration: BoxDecoration(
         color: const Color(0xFFF2F3F7),
         borderRadius: BorderRadius.circular(12),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../widgets/trade_sliding_button.dart';
+
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
@@ -17,15 +18,23 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Center(
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            TradeSlidingButton(text: 'Сдвиньте, чтобы купить', onPressed: () {}),
-            const SizedBox(height: 50),
-            TradeSlidingButton(text: 'Сдвиньте, чтобы купить', onPressed: () {}),
-            const SizedBox(height: 50),
-            TradeSlidingButton(text: 'Variant 3', onPressed: () {}),
+            TradeSlidingButton(
+              text: 'Сдвиньте, чтобы купить',
+              onPressed: () {},
+            ),
+            TradeSlidingButton(
+              text: 'Сдвиньте, чтобы купить',
+              onPressed: () {},
+            ),
+            TradeSlidingButton(
+              text: 'Сдвиньте, чтобы купить',
+              onPressed: () {},
+            ),
           ],
         ),
       ),
